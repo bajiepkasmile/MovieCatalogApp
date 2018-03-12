@@ -1,0 +1,72 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
+
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "com.nodomain.moviecatalogapp"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+ext {
+    support_library_version = "26.1.0"
+    dagger_version = "2.12"
+    retrofit2_version = "2.3.0"
+    room_version = "1.0.0"
+    constraint_layout_version = "1.1.0-beta5"
+    picasso_version = "2.5.2"
+    eventbus_version = "3.0.0"
+    junit_version = "4.12"
+    android_test_runner_version = "1.0.1"
+    espresso_version = "3.0.1"
+    material_progress_bar_version = "1.4.2"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    implementation "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:design:$support_library_version"
+    implementation "com.android.support:recyclerview-v7:$support_library_version"
+    implementation "com.android.support:cardview-v7:$support_library_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    implementation "org.greenrobot:eventbus:$eventbus_version"
+
+    implementation "me.zhanghai.android.materialprogressbar:library:$material_progress_bar_version"
+
+    testImplementation "junit:junit:$junit_version"
+
+    androidTestImplementation "com.android.support.test:runner:$android_test_runner_version"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
+}

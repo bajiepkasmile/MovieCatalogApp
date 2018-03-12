@@ -1,0 +1,23 @@
+<resources>
+	
+	<string name="app_name">Каталог фильмов</string>
+	
+	<string name="search_by_movie_name">Поиск по названию фильма</string>
+	<string name="no_results">"По запросу “%1$s”\nничего не найдено"</string>
+	<string name="could_not_process_request">Нам не удалось обработать\nваш запрос. Попробуйте еще раз</string>
+	<string name="no_network">Проверьте ваше соединение с интернетом и попробуйте ещё раз</string>
+	<string name="dash">—</string>
+	
+	<!--Content descriptions-->
+	<string name="cont_desc.iv_poster">Постер</string>
+	<string name="cont_desc.iv_favorite">Добавить в избранное</string>
+	
+	<!--Samples-->
+	<string name="sample.movie_title">Бегущий по лезвию 2049</string>
+	<string name="sample.movie_overview">
+		Отставной детектив Рик Декард вновь восстановлен в полиции Лос-Анджелеса для поиска возглавляемой Роем
+		Батти группы киборгов, совершившей побег из космической колонии на Землю.
+	</string>
+	<string name="sample.movie_release_date">1 января 2017</string>
+
+</resources>

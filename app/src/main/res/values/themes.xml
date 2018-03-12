@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="theme_app" parent="Theme.AppCompat.NoActionBar">
+		<item name="colorAccent">@color/blue</item>
+		<item name="autoCompleteTextViewStyle">@style/auto_complete_text_view_search</item>
+		<item name="android:colorControlHighlight">@color/gray_transparent</item>
+	</style>
+	
+</resources>

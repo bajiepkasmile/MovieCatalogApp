@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/cl_content"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="0dp"
+		android:layout_height="?android:attr/actionBarSize"
+		android:elevation="@dimen/elevation_toolbar"
+		android:background="?android:colorPrimary"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:contentInsetStart="0dp"
+		>
+		
+		<android.support.v7.widget.SearchView
+			android:id="@+id/sv_filter"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/spacing_small"
+			android:focusable="false"
+			android:background="@drawable/rectangle_rounded_white"
+			app:queryHint="@string/search_by_movie_name"
+			app:closeIcon="@drawable/ic_close"
+			app:searchIcon="@drawable/ic_search"
+			app:iconifiedByDefault="false"
+			/>
+		
+	</android.support.v7.widget.Toolbar>
+	
+	<me.zhanghai.android.materialprogressbar.MaterialProgressBar
+		android:id="@+id/pb_refreshing"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/height_pb_refreshing"
+		android:indeterminate="true"
+		android:visibility="gone"
+		app:layout_constraintTop_toBottomOf="@id/toolbar"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:mpb_progressStyle="horizontal"
+		app:mpb_useIntrinsicPadding="false"
+		style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+		/>
+	
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/srl_movies"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:visibility="gone"
+		app:layout_constraintTop_toBottomOf="@id/pb_refreshing"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:visibility="visible"
+		>
+		
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_movies"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/spacing_tiny"
+			android:clipToPadding="false"
+			tools:listitem="@layout/item_movie"
+			/>
+		
+	</android.support.v4.widget.SwipeRefreshLayout>
+	
+	<ProgressBar
+		android:id="@+id/pb_loading_movies"
+		android:layout_width="@dimen/size_pb_loading_movies"
+		android:layout_height="@dimen/size_pb_loading_movies"
+		android:visibility="gone"
+		app:layout_constraintTop_toBottomOf="@id/pb_refreshing"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		/>
+	
+	<TextView
+		android:id="@+id/tv_status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/gray_light"
+		android:textSize="@dimen/text_size_normal"
+		android:lineSpacingExtra="@dimen/line_spacing_extra_large"
+		android:gravity="center"
+		android:drawablePadding="@dimen/spacing_huge"
+		android:visibility="gone"
+		app:layout_constraintTop_toBottomOf="@id/pb_refreshing"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:text="@string/could_not_process_request"
+		tools:drawableTop="@drawable/ic_alert_big"
+		/>
+	
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/fab_retry"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/spacing_big"
+		android:src="@drawable/ic_refresh"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:visibility="gone"
+		/>
+	
+</android.support.constraint.ConstraintLayout>

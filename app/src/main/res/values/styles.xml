@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="auto_complete_text_view_search" parent="Widget.AppCompat.AutoCompleteTextView">
+		<item name="android:textSize">@dimen/text_size_search_view</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textColorHint">@color/gray_dark</item>
+	</style>
+	
+</resources>

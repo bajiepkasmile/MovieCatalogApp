@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!--Spacings-->
+	<dimen name="spacing_giant">28dp</dimen>
+	<dimen name="spacing_huge">24dp</dimen>
+	<dimen name="spacing_large">20dp</dimen>
+	<dimen name="spacing_big">16dp</dimen>
+	<dimen name="spacing_normal">12dp</dimen>
+	<dimen name="spacing_small">8dp</dimen>
+	<dimen name="spacing_tiny">4dp</dimen>
+	<dimen name="spacing_tinier">2dp</dimen>
+	
+	<!--Font sizes-->
+	<dimen name="text_size_huge">22sp</dimen>
+	<dimen name="text_size_large">20sp</dimen>
+	<dimen name="text_size_big">18sp</dimen>
+	<dimen name="text_size_normal">16sp</dimen>
+	<dimen name="text_size_small">14sp</dimen>
+	
+	<!--Line spacing extras-->
+	<dimen name="line_spacing_extra_large">10sp</dimen>
+	<dimen name="line_spacing_extra_big">8sp</dimen>
+	<dimen name="line_spacing_extra_normal">6sp</dimen>
+	<dimen name="line_spacing_extra_small">4sp</dimen>
+	
+	<!--Specific dimens-->
+	<dimen name="radius_card">2dp</dimen>
+	<dimen name="width_poster">120dp</dimen>
+	<dimen name="height_poster">184dp</dimen>
+	<dimen name="size_iv_favorite">48dp</dimen>
+	<dimen name="size_pb_loading_movies">28dp</dimen>
+	<dimen name="elevation_toolbar">4dp</dimen>
+	<dimen name="margin_bottom_footer_loader">30dp</dimen>
+	<dimen name="text_size_search_view">15sp</dimen>
+	<dimen name="height_pb_refreshing">4dp</dimen>
+	
+</resources>
